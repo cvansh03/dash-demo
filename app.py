@@ -4,7 +4,7 @@ from dash.dependencies import Input, Output
 import pandas as pd
 import plotly.express as px
 
-server = app.server
+
 # Sample Data (Replace this with your population data)
 # For this example, I'll create a simple dataset
 data = {
@@ -15,7 +15,7 @@ df = pd.DataFrame(data)
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
-
+server = app.server
 # Layout of the app
 app.layout = html.Div([
     html.H1("Population Visualization"),
