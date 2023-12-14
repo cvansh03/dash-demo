@@ -20,7 +20,7 @@ df = df.nlargest(10, 'GDP')
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
-
+server = app.server
 # Layout of the app
 app.layout = html.Div([
     html.H1("Top 10 Countries: Different Criteria"),
