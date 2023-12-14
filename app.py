@@ -3,6 +3,7 @@ import dash
 from dash import dcc, html, Input, Output
 import plotly.express as px
 
+
 # Sample Data (Replace this with your actual data)
 data = {
     'Country': ['USA', 'China', 'Japan', 'Germany', 'India', 'UK', 'France', 'Brazil', 'Italy', 'Canada'],
@@ -19,15 +20,6 @@ df = df.nlargest(10, 'GDP')
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
-
-# Dropdown options
-dropdown_options = [
-    {'label': 'Population', 'value': 'Population'},
-    {'label': 'GDP', 'value': 'GDP'},
-    {'label': 'Per Capita Income', 'value': 'PerCapitaIncome'},
-    {'label': 'Avg Salary', 'value': 'AvgSalary'}
-    # Add more options as needed
-]
 
 # Layout of the app
 app.layout = html.Div([
