@@ -21,6 +21,16 @@ df = df.nlargest(10, 'GDP')
 # Initialize the Dash app
 app = dash.Dash(__name__)
 server = app.server
+
+# Dropdown options
+dropdown_options = [
+    {'label': 'Population', 'value': 'Population'},
+    {'label': 'GDP', 'value': 'GDP'},
+    {'label': 'Per Capita Income', 'value': 'PerCapitaIncome'},
+    {'label': 'Avg Salary', 'value': 'AvgSalary'}
+    # Add more options as needed
+]
+
 # Layout of the app
 app.layout = html.Div([
     html.H1("Top 10 Countries: Different Criteria"),
