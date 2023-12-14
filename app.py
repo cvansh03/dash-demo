@@ -4,8 +4,6 @@ from dash.dependencies import Input, Output
 import pandas as pd
 import plotly.express as px
 
-
-server = app.server
 # Sample Data (Replace this with your population data)
 # For this example, I'll create a simple dataset
 data = {
